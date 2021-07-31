@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTING</title>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000030;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(rgba(137,206,254,255),rgba(137,206,254,255));
+    border-radius: 50%;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(rgba(45,55,198,255), rgba(45,55,198,255)
+    );
+    border-radius: 50%; 
+}
+
+.card {
+    position: absolute;
+    width: 508px;
+    height: 314px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    z-index: 2;
+    
+}
+
+.card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(28px);
+    transform-style: preserve-3d;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.card .face.front::before {
+    content:'';
+    position: relative;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+
+.card .face.front .number {
+    position: absolute;
+    bottom: 70px;
+    left: 40px;
+    color: rgb(167, 160, 160);
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 32px;
+    text-shadow: 0 2px 1px #0005;
+}
+
+.card .face.front .card-holder {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: rgb(167, 160, 160);
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.card .face.front .card-image1 {
+    position: absolute;
+    bottom: 25px;
+    left: 440px;
+    color: rgb(167, 160, 160);
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <div class="face front">
+                <img src="https://db3pap002files.storage.live.com/y4mQ2sSmWl8TuqWLt6Puk5s6xoyKgtLU0sNNN1rW9LU5syCSiSv_je8tRlwZYNKzvaQBdA6aBddKui9KZ0gimMSXrLLNkJLyjOfGvj25HdLlpYcVSEw6SIgGKPdwTeGjTlbYs7Tw56VRDAukGr0-qxgfFxdrOs_h8uTiQtEfvR981vc8Q0bHbS0ozWBAs_xvHCs?width=200&height=200&cropmode=none" width="73" height="91" margin-top=80px; align=left />
+                <h2 class="number">738 937 3714</h2>
+                <h5 class="card-holder">ASHWIN NAIR</h5>
+                <img class="card-image1" src="https://db3pap002files.storage.live.com/y4mY-B7zMYYnT82hGgosut4NMgegFOcMRzK_BV28QJWqcTQI5EFoLUpjxtLUZ93jyh4gUO_Wl1vnwoeJc14EAI6QeLD42TOZTDrQvG6-og-HGX2ErP73jnMxBB6JEv0CQ5B5cXm1QHObIC841x0XCPEe8gxIQGwzDxX0ko0H9BZ59rM8MfKA6U48_qHRD8U8fbS?width=835&height=1024&cropmode=none" width="43" height="51" margin-top=80px; align=right />
+            </div>
+        </div>
+    </section> 
+</body>
+</html>
